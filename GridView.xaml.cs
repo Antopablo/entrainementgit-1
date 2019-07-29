@@ -10,25 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Entrainementgit
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour GridView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GridView : Window
     {
-        public MainWindow()
+        public GridView()
         {
             InitializeComponent();
         }
 
+        private void Window_Closed(object sender, EventArgs e)
+        {
+
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            GridView gv = new GridView();
-            gv.Show();
+            MainWindow m = new MainWindow();
+            m.Show();
             Close();
         }
     }
